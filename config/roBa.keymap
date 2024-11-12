@@ -16,22 +16,31 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         twoAndAt: twoAndAt {
             compatible = "zmk,behavior-mod-morph";
             label = "TWOANDAT";
             bindings = <&kp KP_NUMBER_2>, <&kp AT_SIGN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sixAndAnd: sixAndAnd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SIXANDAND";
+            bindings = <&kp KP_NUMBER_6>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sevenAndQuote: sevenAndQuote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEVENANDQUOTE";
+            bindings = <&kp KP_NUMBER_7>, <&kp APOSTROPHE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -61,10 +70,10 @@
 
         FUNCTION {
             bindings = <
-&kp NUMBER_1  &twoAndAt  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans        &trans     &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans        &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans        &trans     &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&kp NUMBER_1  &twoAndAt  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans        &trans     &trans        &trans        &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans        &trans     &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
+&trans        &trans     &trans        &trans        &trans  &trans    &trans  &trans                          &kp F12
             >;
         };
 
