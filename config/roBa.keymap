@@ -16,10 +16,10 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        twoAndAt: twoAndAt {
+        twoAndDqt: twoAndDqt {
             compatible = "zmk,behavior-mod-morph";
-            label = "TWOANDAT";
-            bindings = <&kp KP_NUMBER_2>, <&kp AT_SIGN>;
+            label = "TWOANDDQT";
+            bindings = <&kp KP_NUMBER_2>, <&kp DOUBLE_QUOTES>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -60,6 +60,24 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        minusAndEqual: minusAndEqual {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUSANDEQUAL";
+            bindings = <&kp KP_MINUS>, <&kp KP_EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        atAndGrave: atAndGrave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ATANDGRAVE";
+            bindings = <&kp AT_SIGN>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -67,10 +85,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T                      &kp Y          &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &none    &none      &kp H          &kp J  &kp K      &kp L    &kp MINUS
-&kp Z  &kp X  &kp C  &kp V  &kp B  &none    &none      &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&none  &none  &none  &none  &none  &none    &kp ENTER  &kp BACKSPACE                             &none
+&kp Q  &kp W  &kp E  &kp R  &kp T                                     &kp Y          &kp U  &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G                 &none    &none      &kp H          &kp J  &kp K      &kp L    &minusAndEqual
+&kp Z  &kp X  &kp C  &kp V  &kp B                 &none    &none      &kp N          &kp M  &kp COMMA  &kp DOT  &atAndGrave
+&none  &none  &none  &none  &mt LEFT_SHIFT SPACE  &none    &kp ENTER  &kp BACKSPACE                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -78,10 +96,10 @@
 
         FUNCTION {
             bindings = <
-&kp NUMBER_1  &twoAndAt  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans        &trans     &trans        &trans        &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans        &trans     &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans        &trans     &trans        &trans        &trans  &trans    &trans  &trans                          &kp F12
+&kp NUMBER_1  &twoAndDqt  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &sixAndAnd  &sevenAndQuote  &eightAndPa1  &nineAndPar2  &kp F5
+&trans        &trans      &trans        &trans        &trans  &trans    &trans  &kp F6      &kp F7          &kp F8        &kp F9        &kp F10
+&trans        &trans      &trans        &trans        &trans  &trans    &trans  &trans      &trans          &trans        &trans        &kp F11
+&trans        &trans      &trans        &trans        &trans  &trans    &trans  &trans                                                  &kp F12
             >;
         };
 
