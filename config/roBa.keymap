@@ -42,6 +42,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        eightAndPa1: eightAndPa1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EIGHTANDPA1";
+            bindings = <&kp KP_NUMBER_8>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        nineAndPar2: nineAndPar2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NINEANDPAR2";
+            bindings = <&kp KP_NUMBER_9>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
