@@ -24,6 +24,25 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        twoAndAt: twoAndAt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TWOANDAT";
+            bindings = <&kp KP_NUMBER_2>, <&kp AT_SIGN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>, <&kp>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -42,10 +61,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&kp NUMBER_1  &twoAndAt  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans        &trans     &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans        &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
+&trans        &trans     &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
             >;
         };
 
