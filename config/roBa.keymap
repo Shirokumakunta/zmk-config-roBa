@@ -8,9 +8,6 @@
 #define SCROLL 5
 #define NUM 6
 
-CONFIG_ZMK_MOUSE_TICK_DURATION=8 
-CONFIG_ZMK_MOUSE_MOVE_MAX_SPEED=1000
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
