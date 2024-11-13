@@ -21,17 +21,17 @@
         twoAndDqt: twoAndDqt {
             compatible = "zmk,behavior-mod-morph";
             label = "TWOANDDQT";
-            bindings = <&kp KP_NUMBER_2>, <&kp JP_DQT>;
+            bindings = <&kp NUMBER_2>, <&kp JP_DQT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         sixAndAnd: sixAndAnd {
             compatible = "zmk,behavior-mod-morph";
             label = "SIXANDAND";
-            bindings = <&kp KP_NUMBER_6>, <&kp JP_AMPS>;
+            bindings = <&kp NUMBER_6>, <&kp JP_AMPS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -40,7 +40,7 @@
         sevenAndQuote: sevenAndQuote {
             compatible = "zmk,behavior-mod-morph";
             label = "SEVENANDQUOTE";
-            bindings = <&kp KP_NUMBER_7>, <&kp APOSTROPHE>;
+            bindings = <&kp NUMBER_7>, <&kp JP_SQT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -49,7 +49,7 @@
         eightAndPa1: eightAndPa1 {
             compatible = "zmk,behavior-mod-morph";
             label = "EIGHTANDPA1";
-            bindings = <&kp KP_NUMBER_8>, <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp NUMBER_8>, <&kp JP_LPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -58,7 +58,7 @@
         nineAndPar2: nineAndPar2 {
             compatible = "zmk,behavior-mod-morph";
             label = "NINEANDPAR2";
-            bindings = <&kp KP_NUMBER_9>, <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp NUMBER_9>, <&kp JP_RPAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -67,7 +67,7 @@
         minusAndEqual: minusAndEqual {
             compatible = "zmk,behavior-mod-morph";
             label = "MINUSANDEQUAL";
-            bindings = <&kp KP_MINUS>, <&kp KP_EQUAL>;
+            bindings = <&kp JP_MINUS>, <&kp JP_EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -76,7 +76,7 @@
         atAndGrave: atAndGrave {
             compatible = "zmk,behavior-mod-morph";
             label = "ATANDGRAVE";
-            bindings = <&kp AT_SIGN>, <&kp GRAVE>;
+            bindings = <&kp JP_AT>, <&kp JP_GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
