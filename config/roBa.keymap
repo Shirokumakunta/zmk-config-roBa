@@ -1,9 +1,8 @@
+#include "keycode_japanese.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-
-#include "keycode_japanese.h"
 
 #define MOUSE 4
 #define SCROLL 5
@@ -88,10 +87,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R               &kp T                                                &kp Y          &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F               &kp G                 &none               &none      &kp H          &kp J  &kp K      &kp L    &minusAndEqual
-&kp Z  &kp X  &kp C  &kp V               &kp B                 &none               &none      &kp N          &kp M  &kp COMMA  &kp DOT  &atAndGrave
-&none  &none  &none  &lt 2 INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &lt 1 INT_HENKAN    &kp ENTER  &kp BACKSPACE                             &kp JP_AT
+&kp Q  &kp W  &kp E  &kp R               &kp T                                                &kp Y          &kp U  &kp I      &kp O         &kp P
+&kp A  &kp S  &kp D  &kp F               &kp G                 &none               &none      &kp H          &kp J  &kp K      &kp L         &minusAndEqual
+&kp Z  &kp X  &kp C  &kp V               &kp B                 &none               &none      &kp N          &kp M  &kp COMMA  &lt 4 PERIOD  &atAndGrave
+&none  &none  &none  &lt 1 INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &lt 2 INT_HENKAN    &kp ENTER  &kp BACKSPACE                                  &kp JP_AT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -100,18 +99,18 @@
         NUM {
             bindings = <
 &kp NUMBER_1  &twoAndDqt  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &sixAndAnd  &sevenAndQuote  &eightAndPa1  &nineAndPar2  &kp NUMBER_0
-&trans        &trans      &trans        &trans        &trans  &trans    &trans  &trans      &trans          &kp JP_LBKT        &kp JP_RBKT         &kp JP_SLASH
-&trans        &trans      &trans        &trans        &trans  &trans    &trans  &trans      &trans          &kp JP_SEMI        &kp JP_COLON        &kp JP_BSLH
-&trans        &trans      &trans        &trans        &trans  &trans    &trans  &trans                                                  &trans
+&trans        &trans      &trans        &trans        &trans        &trans    &trans  &trans      &trans          &kp JP_LBKT   &kp JP_RBKT   &kp JP_SLASH
+&trans        &trans      &trans        &trans        &trans        &trans    &trans  &trans      &trans          &kp JP_SEMI   &kp JP_COLON  &kp JP_BSLH
+&trans        &trans      &trans        &trans        &trans        &trans    &trans  &trans                                                  &trans
             >;
         };
 
         ARROWANDFUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&kp F1  &trans  &trans  &trans  &trans                    &trans  &trans    &trans          &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &kp UP_ARROW    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                       &trans
             >;
         };
 
@@ -128,10 +127,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                              &trans
             >;
         };
 
