@@ -8,6 +8,34 @@
 #define SCROLL 5
 #define NUM 6
 
+#define U_MOUSE_MOVE_MAX 1400  // カーソル移動の最大速度（デフォルトは600）
+
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+
+#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+
+#define U_MOUSE_SCROLL_MAX 100  // スクロールの最大速度（デフォルトは10）
+
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+
+#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+
+&mmv {
+    time-to-max-speed-ms = <400>;  // 最大速度に達するまでの時間（ミリ秒）
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
