@@ -135,7 +135,7 @@
         NUM {
             bindings = <
 &kp NUMBER_1  &twoAndDqt  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &sixAndAnd   &sevenAndQuote  &eightAndPa1  &nineAndPar2  &kp NUMBER_0
-&trans        &trans      &trans        &kp TAB       &kp ESC       &trans    &trans  &trans       &trans          &kp JP_LBKT   &kp JP_RBKT   &kp JP_SLASH
+&trans        &trans      &trans        &trans        &kp ESC       &trans    &trans  &trans       &trans          &kp JP_LBKT   &kp JP_RBKT   &kp JP_SLASH
 &trans        &trans      &trans        &trans        &trans        &trans    &trans  &kp JP_SEMI  &kp JP_COLON    &kp COMMA     &kp PERIOD    &kp JP_BSLH
 &trans        &trans      &trans        &trans        &trans        &trans    &trans  &kp DELETE                                               &trans
             >;
@@ -163,10 +163,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &mo 5      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
         };
 
