@@ -106,6 +106,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        rightClickAndScrollLayer: rightClickAndScrollLayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHTCLICKANDSCROLLLAYER";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -113,10 +123,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R               &kp T                                                      &kp Y          &kp U  &kp I      &kp O      &kp P
-&kp A  &kp S  &kp D  &kp F               &kp G                 &none               &none            &kp H          &kp J  &kp K      &kp L      &minusAndEqual
-&kp Z  &kp X  &kp C  &kp V               &kp B                 &none               &none            &kp N          &kp M  &mkp LCLK  &mkp RCLK  &atAndGrave
-&none  &none  &none  &lt 1 INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &lt 2 INT_HENKAN    &mt LCTRL ENTER  &kp BACKSPACE                               &mo 5
+&kp Q  &kp W  &kp E  &kp R               &kp T                                                      &kp Y          &kp U  &kp I      &kp O                             &kp P
+&kp A  &kp S  &kp D  &kp F               &kp G                 &none               &none            &kp H          &kp J  &kp K      &kp L                             &minusAndEqual
+&kp Z  &kp X  &kp C  &kp V               &kp B                 &none               &none            &kp N          &kp M  &mkp LCLK  &rightClickAndScrollLayer 5 RCLK  &atAndGrave
+&none  &none  &none  &lt 1 INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &lt 2 INT_HENKAN    &mt LCTRL ENTER  &kp BACKSPACE                                                      &mo 5
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -124,10 +134,10 @@
 
         NUM {
             bindings = <
-&kp NUMBER_1  &twoAndDqt  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &sixAndAnd  &sevenAndQuote  &eightAndPa1  &nineAndPar2  &kp NUMBER_0
-&trans        &trans      &trans        &kp TAB       &kp ESC       &trans    &trans  &trans      &trans          &kp JP_LBKT   &kp JP_RBKT   &kp JP_SLASH
-&trans        &trans      &trans        &trans        &trans        &trans    &trans  &kp JP_SEMI &kp JP_COLON    &kp COMMA   &kp PERIOD  &kp JP_BSLH
-&trans        &trans      &trans        &trans        &trans        &trans    &trans  &kp DELETE                                              &trans
+&kp NUMBER_1  &twoAndDqt  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &sixAndAnd   &sevenAndQuote  &eightAndPa1  &nineAndPar2  &kp NUMBER_0
+&trans        &trans      &trans        &kp TAB       &kp ESC       &trans    &trans  &trans       &trans          &kp JP_LBKT   &kp JP_RBKT   &kp JP_SLASH
+&trans        &trans      &trans        &trans        &trans        &trans    &trans  &kp JP_SEMI  &kp JP_COLON    &kp COMMA     &kp PERIOD    &kp JP_BSLH
+&trans        &trans      &trans        &trans        &trans        &trans    &trans  &kp DELETE                                               &trans
             >;
         };
 
