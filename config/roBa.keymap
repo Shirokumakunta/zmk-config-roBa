@@ -126,7 +126,7 @@
 &kp Q  &kp W  &kp E  &kp R          &kp T                                                          &kp Y             &kp U  &kp I      &kp O         &kp P
 &kp A  &kp S  &kp D  &kp F          &kp G                 &none                 &none              &kp H             &kp J  &kp K      &kp L         &kp BACKSPACE
 &kp Z  &kp X  &kp C  &kp V          &kp B                 &none                 &none              &kp N             &kp M  &kp COMMA  &lt 4 PERIOD  &minusAndEqual
-&none  &none  &none  &mt LCTRL TAB  &mt LEFT_SHIFT SPACE  &lt 1 INT_MUHENKAN    &mt AT_SIGN ENTER  &lt 2 INT_HENKAN                                  &none
+&none  &none  &none  &mt LCTRL TAB  &mt LEFT_SHIFT SPACE  &lt 1 INT_MUHENKAN    &mt JP_AT ENTER  &lt 2 INT_HENKAN                                  &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
