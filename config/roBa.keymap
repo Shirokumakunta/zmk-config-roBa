@@ -40,7 +40,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        ctrlAndTab {
+            bindings = <&mt LCTRL TAB>;
+            key-positions = <39 38>;
+        };
+    };
 
     behaviors {
         twoAndDqt: twoAndDqt {
