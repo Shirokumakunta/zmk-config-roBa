@@ -1,13 +1,41 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        LClk {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+        };
+
+        RClk {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 20>;
+        };
+
+        Muhenkan {
+            bindings = <&kp INT_MUHENKAN>;
+            key-positions = <29 30>;
+        };
+
+        Henkan {
+            bindings = <&kp INT_HENKAN>;
+            key-positions = <30 31>;
+        };
+
+        Ctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <39 38>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
