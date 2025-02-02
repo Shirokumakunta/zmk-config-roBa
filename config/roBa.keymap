@@ -44,7 +44,7 @@
             bindings = <
 &kp Q  &kp W  &kp E  &kp R         &kp T                                               &kp Y     &kp U  &kp I      &kp O    &kp P
 &kp A  &kp S  &kp D  &kp F         &kp G                 &kp LS(LG(S))      &none      &kp H     &kp J  &kp K      &lt 5 L  &kp MINUS
-&kp Z  &kp X  &kp C  &kp V         &kp B                 &none              &none      &kp N     &kp M  &kp COMMA  &kp DOT  &kp AT
+&kp Z  &kp X  &kp C  &kp V         &kp B                 &none              &none      &kp N     &kp M  &kp COMMA  &kp DOT  &kp LBKT
 &none  &none  &none  &lt 2 ESCAPE  &mt LEFT_SHIFT SPACE  &lt 1 TAB          &kp ENTER  &kp BSPC                             &none
             >;
 
@@ -63,9 +63,9 @@
         NUM {
             bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6            &kp N7             &kp N8          &kp N9           &kp N0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &kp AT_SIGN        &kp HASH        &kp DOLLAR       &kp PERCENT
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                &kp PIPE
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &kp AT_SIGN        &kp HASH        &kp RBKT       &kp SLASH
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_BRACKET  &kp SEMI  &kp SQT  &kp NUHS       &kp INT1
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                &kp trans
             >;
         };
 
