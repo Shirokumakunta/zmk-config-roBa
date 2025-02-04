@@ -23,7 +23,7 @@
 
         Muhenkan {
             bindings = <&kp INT_MUHENKAN>;
-            key-positions = <38 39>;
+            key-positions = <38 37>;
         };
 
         Henkan {
@@ -33,7 +33,7 @@
 
         Ctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <38 37>;
+            key-positions = <38 39>;
         };
     };
 
@@ -42,10 +42,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R         &kp T                                               &kp Y     &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F         &kp G                 &kp LS(LG(S))      &none      &kp H     &kp J  &kp K      &lt 5 L  &kp MINUS
-&kp Z  &kp X  &kp C  &kp V         &kp B                 &none              &none      &kp N     &kp M  &kp COMMA  &kp DOT  &kp LBKT
-&none  &none  &none  &lt 2 ESCAPE  &mt LEFT_SHIFT SPACE  &lt 1 TAB          &kp ENTER  &kp BSPC                             &none
+&kp Q  &kp W  &kp E  &kp R      &kp T                                               &kp Y     &kp U  &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F      &kp G                 &kp LS(LG(S))      &none      &kp H     &kp J  &kp K      &lt 5 L  &kp MINUS
+&kp Z  &kp X  &kp C  &kp V      &kp B                 &none              &none      &kp N     &kp M  &kp COMMA  &kp DOT  &kp LBKT
+&none  &none  &none  &lt 2 TAB  &mt LEFT_SHIFT SPACE  &lt 1 ESCAPE       &kp ENTER  &kp BSPC                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
