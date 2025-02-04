@@ -22,13 +22,13 @@
         };
 
         Tab {
-            bindings = <&kp INT_MUHENKAN>;
-            key-positions = <12 13>;
+            bindings = <&kp TAB>;
+            key-positions = <13 14>;
         };
 
         Escape {
-            bindings = <&kp INT_HENKAN>;
-            key-positions = <12 11>;
+            bindings = <&kp ESCAPE>;
+            key-positions = <12 13>;
         };
 
         Ctrl {
