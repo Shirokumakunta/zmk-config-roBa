@@ -23,12 +23,12 @@
 
         Muhenkan {
             bindings = <&kp INT_MUHENKAN>;
-            key-positions = <38 37>;
+            key-positions = <26 25>;
         };
 
         Henkan {
             bindings = <&kp INT_HENKAN>;
-            key-positions = <41 40>;
+            key-positions = <29 30>;
         };
 
         Ctrl {
